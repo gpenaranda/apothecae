@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+# Validaciones 
+use Symfony\Component\Validator\Constraints as Assert;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -17,16 +20,19 @@ class Almacenes
     private $id;
 
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=255)
      */
     private $nombre;
 
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=120)
      */
     private $nombre_corto;
 
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=255)
      */
     private $direccion;

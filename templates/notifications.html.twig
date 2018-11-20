@@ -1,0 +1,19 @@
+{# Tipos de Notificaciones:
+    >> alert-info
+    >> alert-success
+    >> alert-warning
+    >> alert-danger
+    >> alert-primary
+#}
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="alert alert-{{ label }}">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <i class="material-icons">close</i>
+            </button>
+            <span>
+                {{ message }}
+            </span>
+        </div>
+    {% endfor %}
+{% endfor %}

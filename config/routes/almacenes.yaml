@@ -1,3 +1,7 @@
 almacenes_index:
     path: /
     controller: App\Controller\AlmacenesController::index
+
+almacenes_new:
+    path: /registrar
+    controller: App\Controller\AlmacenesController::new

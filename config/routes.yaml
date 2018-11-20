@@ -5,7 +5,7 @@ logout:
 # Dashboard (Inicio)
 dashboard:
     path: /
-    controller: App\Controller\AlmacenesController::index
+    controller: App\Controller\DashBoardController::index
 
 # Almacenes
 almacenes:

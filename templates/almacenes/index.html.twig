@@ -1,12 +1,45 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-Almacenes
 
-<ul>
-    {% for almacen in almacenes %}
-        <li>{{ almacen.id }}</li>
-    {% endfor %}
-</ul>
+{# Notificaciones #}
+{% include 'notifications.html.twig' %}
 
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-success pull-right"href="{{ path('almacenes_new') }}">
+        <i class="material-icons">add</i>
+        Registrar</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title ">Listado</h4>
+        <p class="card-category">Es considerado un lugar o espacio físico para el almacenaje de productos.</p>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class=" text-primary">
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Nombre Corto</th>
+                    <th>Direcci&oacute;n</th>
+                </thead>
+                <tbody>
+                    {% for almacen in almacenes %}
+                    <tr>
+                        <td>{{ almacen.id }}</td>
+                        <td>{{ almacen.nombre }}</td>
+                        <td>{{ almacen.nombreCorto }}</td>
+                        <td>{{ almacen.direccion }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock body %}
+
