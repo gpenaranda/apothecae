@@ -1,0 +1,3 @@
+almacenes_index:
+    path: /
+    controller: App\Controller\AlmacenesController::index

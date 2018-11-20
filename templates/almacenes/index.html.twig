@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+Almacenes
+
+<ul>
+    {% for almacen in almacenes %}
+        <li>{{ almacen.id }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock body %}
