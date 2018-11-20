@@ -1,3 +1,7 @@
+# Logout
+logout:
+    path: /logout
+
 # Dashboard (Inicio)
 dashboard:
     path: /
